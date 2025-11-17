@@ -4,9 +4,9 @@ RUN rm -rf /usr/share/nginx/html/index.html
 # COPY code /usr/share/nginx/html/index.html
 RUN rm -rf /etc/nginx/nginx.conf
 # COPY nginx.conf /etc/nginx/nginx.conf
-RUN apt-get update && apt-get upgrade -y \
-    && apt install nano curl -y \ 
-    && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && apt-get upgrade -y \
+#     && apt install nano curl -y \ 
+#     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /var/cache/nginx/client_temp && \
         mkdir -p /var/cache/nginx/proxy_temp && \
